@@ -36,7 +36,9 @@ public class MainActivity extends AppCompatActivity {
 
     //Replace this with your App ID from the Layer Developer page.
     //Go http://developer.layer.com, click on "Dashboard" and select "Keys"
-    public static final String LAYER_APP_ID = "LAYER_APP_ID";
+
+//    public static final String LAYER_APP_ID = "layer:///apps/staging/997d87fa-da63-11e5-a6cf-f912bb0205a9";   //Cory's app
+    public static final String LAYER_APP_ID = "layer:///apps/staging/d15f321c-e248-11e5-bf8b-0c6f890307be";   //Omar's app
 
     //Optional: Enable Push Notifications
     // Layer uses Google Cloud Messaging for Push Notifications. Go to
@@ -45,7 +47,8 @@ public class MainActivity extends AppCompatActivity {
     // an invalid Project Number is used here, the Layer SDK will function, but
     // users will not receive Notifications when the app is closed or in the
     // background).
-    public static final String GCM_PROJECT_NUMBER = "00000";
+//    public static final String GCM_PROJECT_NUMBER = "362973509411";   //Omar's project
+    public static final String GCM_PROJECT_NUMBER = "00000";    //Original value
 
 
     //Global variables used to manage the Layer Client and the conversations in this app
@@ -180,14 +183,14 @@ public class MainActivity extends AppCompatActivity {
     // Device, and assign the User ID based on the runtime environment.
     public static String getUserID(){
         if(Build.FINGERPRINT.startsWith("generic"))
-            return "Simulator";
+            return "Genymotion";
 
-        return "Device";
+        return "Omar";
     }
 
     //By default, create a conversationView between these 3 participants
     public static List<String> getAllParticipants(){
-        return Arrays.asList("Device", "Simulator", "Dashboard");
+        return Arrays.asList("Omar", "Genymotion", "Dashboard");
     }
 
     //Once the user has successfully authenticated, begin the conversationView

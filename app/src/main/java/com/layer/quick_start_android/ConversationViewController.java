@@ -103,7 +103,7 @@ public class ConversationViewController implements View.OnClickListener, LayerCh
     }
 
     public static String getInitialMessage() {
-        return "Hey, everyone! This is your friend, " + MainActivity.getUserID();
+        return "";
     }
 
     //Create a new message and send it

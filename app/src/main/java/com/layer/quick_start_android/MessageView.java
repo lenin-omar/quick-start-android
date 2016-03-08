@@ -1,6 +1,7 @@
 package com.layer.quick_start_android;
 
 import android.graphics.Typeface;
+import android.provider.Settings;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
